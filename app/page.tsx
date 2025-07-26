@@ -66,13 +66,13 @@ export default function WerkhausLanding() {
       name: "Dawn Bennett",
       role: "Elite Paralegal Services Founder",
       content:
-        "Werkhaus transformed our online presence completely. Our conversion rate increased by 340% in just 3 months!",
+        "Designed and developed a modern, user-friendly website for Elite Paralegal Services — a boutique legal support firm specializing in document prep, case management, and client advocacy.",
       rating: 5,
       image: "/placeholder.svg?height=60&width=60",
     },
     {
-      name: "Marcus Rodriguez",
-      role: "SaaS Entrepreneur",
+      name: "Suzanne Sizemore",
+      role: "Namaste Nook Founder & CEO",
       content:
         "The AI-powered automation tools saved us 20+ hours per week. Best investment we've made for our startup.",
       rating: 5,
@@ -89,22 +89,28 @@ export default function WerkhausLanding() {
 
   const portfolioItems = [
     {
-      title: "TechFlow SaaS",
-      category: "SaaS Platform",
-      image: "/images/techflow-saas.png",
-      description: "AI-powered project management platform",
+      title: "Elite Paralegal Services",
+      category: "Web Design · Strategy",
+      image: "/images/elite-paralegal.png",
+      description:
+        "Clean, professional website for a legal support agency with custom copy, contact forms, and mobile optimization. WordPress build reflecting trust and credibility.",
+      highlights: ["WordPress", "Mobile-optimized", "Brand tone: authoritative + approachable"],
     },
     {
-      title: "EcoMarket",
-      category: "E-commerce",
-      image: "/images/ecomarket.png",
-      description: "Sustainable products marketplace",
+      title: "Namaste Nook with Suzanne",
+      category: "Wellness Brand · Social Automation",
+      image: "/images/namaste-nook.png",
+      description:
+        "Cohesive content strategy and automated social posting workflow for yoga instructor, elevating brand voice across YouTube, Instagram, and digital products.",
+      highlights: ["Branded Canva templates", "Make.com + Instagram automation", "Custom YouTube cover + captions"],
     },
     {
-      title: "FinanceAI",
-      category: "Fintech",
-      image: "/images/financeai.png",
-      description: "Automated investment platform",
+      title: "My Closet App",
+      category: "Fashion Tech · Pre-Launch Marketing",
+      image: "/images/my-closet-app.png",
+      description:
+        "Visual and content strategy for fashion app targeting Gen Z with 'messy girl aesthetic.' Bold red-black branding and 30-day campaign planning.",
+      highlights: ["Social media content calendar", "Launch funnel structure", "Bold aesthetic direction"],
     },
   ]
 
@@ -283,15 +289,15 @@ export default function WerkhausLanding() {
             <div className="flex justify-center space-x-6 mb-8">
               <Badge variant="outline" className="border-orange-500/50 text-orange-400">
                 <Clock className="w-4 h-4 mr-2" />
-                48hr Turnaround
+                72hr turnaround
               </Badge>
               <Badge variant="outline" className="border-orange-500/50 text-orange-400">
                 <Users className="w-4 h-4 mr-2" />
-                500+ Happy Clients
+                Hablamos Español
               </Badge>
               <Badge variant="outline" className="border-orange-500/50 text-orange-400">
                 <Award className="w-4 h-4 mr-2" />
-                Award Winning
+                Free Consultation
               </Badge>
             </div>
 
@@ -323,7 +329,7 @@ export default function WerkhausLanding() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-black font-bold px-8 py-4 text-lg transition-all duration-300"
+                className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-black font-bold px-8 py-4 text-lg transition-all duration-300 bg-transparent"
               >
                 View Portfolio
               </Button>
