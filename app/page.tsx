@@ -548,7 +548,7 @@ export default function WerkhausLanding() {
               <div className="space-y-3 text-gray-400">
                 <div className="flex items-center">
                   <Mail className="w-4 h-4 mr-2 text-orange-500" />
-                  arlo.beautyco@gmail.com
+                  info@werkhausagency.com
                 </div>
                 <div className="flex items-center">
                   <Phone className="w-4 h-4 mr-2 text-orange-500" />
