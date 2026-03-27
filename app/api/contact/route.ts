@@ -5,7 +5,7 @@ export async function POST(req: Request) {
     // ✅ Get form data
     const { name, email, company, projectType, details } = await req.json();
 
-    // 🛑 Basic validation
+    // 🛑 Validation
     if (!name || !email || !projectType || !details) {
       return NextResponse.json(
         { error: "Missing required fields" },
@@ -21,8 +21,17 @@ export async function POST(req: Request) {
       details,
     });
 
+    // 🚨 Check API key exists
+    if (!process.env.RESEND_API_KEY) {
+      console.error("❌ Missing RESEND_API_KEY");
+      return NextResponse.json(
+        { error: "Server misconfiguration" },
+        { status: 500 }
+      );
+    }
+
     // 📩 Send email via Resend
-    const response = await fetch("https://api.resend.com/emails", {
+    const resendResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
@@ -53,10 +62,10 @@ export async function POST(req: Request) {
       }),
     });
 
-    // ❌ Handle email error
-    if (!response.ok) {
-      const errorData = await response.text();
-      console.error("❌ Resend Error:", errorData);
+    // ❌ Handle Resend error
+    if (!resendResponse.ok) {
+      const errorText = await resendResponse.text();
+      console.error("❌ Resend Error:", errorText);
 
       return NextResponse.json(
         { error: "Email failed to send" },
@@ -64,8 +73,13 @@ export async function POST(req: Request) {
       );
     }
 
-    // ✅ Success
-    return NextResponse.json({ success: true });
+    console.log("✅ Email sent successfully");
+
+    // ✅ Success response
+    return NextResponse.json({
+      success: true,
+      message: "Email sent successfully",
+    });
 
   } catch (error) {
     console.error("❌ Server Error:", error);
