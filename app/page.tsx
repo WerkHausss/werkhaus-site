@@ -31,6 +31,7 @@ import { ContactForm } from "@/components/contact-form"
 export default function WerkhausLanding() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -113,6 +114,8 @@ export default function WerkhausLanding() {
       highlights: ["Social media content calendar", "Launch funnel structure", "Bold aesthetic direction"],
     },
   ]
+
+  
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
@@ -319,20 +322,27 @@ export default function WerkhausLanding() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold px-8 py-4 text-lg group transition-all duration-300 transform hover:scale-105"
-              >
-                Launch My Site
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-black font-bold px-8 py-4 text-lg transition-all duration-300 bg-transparent"
-              >
-                View Portfolio
-              </Button>
+              
+            <button
+              onClick={() => setOpen(true)}
+              className="relative px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-lg overflow-hidden group transition-all duration-300 transform hover:scale-105"
+        >
+             {/* TEXT */}
+            <span className="relative z-10 flex items-center gap-2">
+               Start My Project →
+             </span>
+
+             {/* GLOW */}
+            <span className="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-500 opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></span>
+
+             {/* SHINE */}
+             <span className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-white blur-2xl transition duration-500"></span>
+            </button>
+
+          {/* SECOND BUTTON (KEEP SEPARATE) */}
+          <Button>
+             View Portfolio
+          </Button>
             </div>
           </div>
         </div>
@@ -567,6 +577,61 @@ export default function WerkhausLanding() {
           </div>
         </div>
       </footer>
+
+      {/* 🔥 MODAL GOES HERE */}
+      {open && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+          <div className="bg-gray-900 border border-orange-500/20 rounded-2xl p-8 w-full max-w-lg relative">
+
+            <button
+              onClick={() => setOpen(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-white"
+            >
+              ✕
+            </button>
+
+            <h2 className="text-2xl font-bold mb-2 text-white">
+              Let’s Build Something Iconic
+            </h2>
+
+            <p className="text-sm text-gray-400 mb-6">
+              Takes less than 60 seconds.
+            </p>
+
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault()
+                const formData = new FormData(e.currentTarget)
+
+                await fetch("/api/contact", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({
+                    name: formData.get("name"),
+                    email: formData.get("email"),
+                    projectType: formData.get("projectType"),
+                    details: formData.get("details"),
+                  }),
+                })
+
+                setOpen(false)
+                alert("🔥 Submitted successfully!")
+              }}
+              className="space-y-4"
+            >
+              <input name="name" placeholder="Name" required className="w-full p-3 rounded bg-black border border-gray-700 text-white" />
+              <input name="email" placeholder="Email" required className="w-full p-3 rounded bg-black border border-gray-700 text-white" />
+              <input name="projectType" placeholder="Project Type" required className="w-full p-3 rounded bg-black border border-gray-700 text-white" />
+              <textarea name="details" placeholder="Details" required className="w-full p-3 rounded bg-black border border-gray-700 text-white" />
+
+              <button className="w-full py-3 rounded-lg bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold">
+                Submit →
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+
     </div>
   )
 }
