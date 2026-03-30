@@ -80,9 +80,9 @@ export default function WerkhausLanding() {
       image: "/placeholder.svg?height=60&width=60",
     },
     {
-      name: "Veronica Franco",
-      role: "Digital Marketing Agency",
-      content: "Professional, fast, and results-driven. Werkhaus delivered exactly what they promised and more.",
+      name: "Harufa Nzuri",
+      role: "E-commerce Brand",
+      content: "Werkhaus built our full online store with Stripe checkout and a backend CRM system to manage orders and customers. Everything feels seamless and elevated.",
       rating: 5,
       image: "/placeholder.svg?height=60&width=60",
     },
