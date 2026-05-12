@@ -1,5 +1,5 @@
 "use client"
-
+import HeroDashboard from "@/components/hero-dashboard"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -186,20 +186,63 @@ export default function WerkhausLanding() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-600/20 via-red-600/10 to-black"></div>
+       {/* CINEMATIC BACKGROUND */}
+<div className="absolute inset-0 overflow-hidden bg-black">
 
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
+  {/* Main Orange Atmosphere */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,120,0,0.12),transparent_60%)]" />
+
+  {/* REALISTIC PLANET */}
+  <div className="absolute right-[-19%] top-1/2 -translate-y-1/2 w-[950px] h-[950px] rounded-full planet-float overflow-hidden">
+
+    {/* Planet Core */}
+    <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_30%_30%,#ff8a1c_0%,#ff7a00_25%,#ff4d00_55%,#120000_100%)] shadow-[0_0_180px_rgba(255,120,0,0.45)]" />
+
+    {/* REAL PLANET TEXTURE */}
+<div
+  className="absolute inset-0 opacity-40 mix-blend-overlay bg-cover bg-center"
+  style={{
+    backgroundImage: "url('/planet-texture.jpg')",
+  }}
+/>
+    {/* Surface Veins */}
+    <div className="absolute inset-0 opacity-25 mix-blend-soft-light bg-[linear-gradient(120deg,transparent_0%,rgba(255,255,255,0.08)_30%,transparent_60%)]" />
+
+    {/* Realistic Shadow */}
+<div className="absolute inset-0 bg-[linear-gradient(to_left,transparent_15%,rgba(0,0,0,0.2)_55%,rgba(0,0,0,1)_100%)]" />
+
+    {/* Rim Glow */}
+    <div className="absolute inset-0 rounded-full border border-orange-200/50 shadow-[0_0_18px_rgba(255,210,120,1)]" />
+
+    {/* Atmosphere Ring */}
+    <div className="absolute inset-[-40px] rounded-full border border-orange-400/10 blur-xl" />
+
+  </div>
+
+  {/* Large Atmospheric Blur */}
+  <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[1200px] h-[1200px] rounded-full bg-orange-500/6 blur-[220px]" />
+
+  {/* Ambient Glow */}
+  <div className="absolute right-0 top-0 w-[700px] h-[700px] bg-orange-500/20 blur-[180px]" />
+
+{/* Left Side Atmospheric Glow */}
+<div className="absolute left-[-200px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-orange-500/5 blur-[180px]" />
+
+
+{/* Star Particles */}
+<div className="absolute top-20 left-1/3 w-2 h-2 bg-orange-400 rounded-full shadow-[0_0_15px_rgba(255,120,0,1)] animate-pulse" />
+
+<div className="absolute top-1/2 left-1/4 w-1 h-1 bg-orange-300 rounded-full shadow-[0_0_10px_rgba(255,120,0,0.8)]" />
+
+<div className="absolute bottom-32 left-1/2 w-2 h-2 bg-orange-500 rounded-full shadow-[0_0_20px_rgba(255,120,0,1)] animate-pulse" />
+</div>
+
 
         {/* Floating Tech Icons and Shapes */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Floating Icons */}
           <div
-            className="absolute top-20 left-10 opacity-20 animate-bounce"
+            className="absolute top-20 left-10 opacity-3 animate-bounce"
             style={{ animationDelay: "0s", animationDuration: "6s" }}
           >
             <Code className="w-8 h-8 text-orange-400" />
@@ -304,49 +347,58 @@ export default function WerkhausLanding() {
               </Badge>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-white via-orange-200 to-orange-500 bg-clip-text text-transparent">
-                Build Smarter,
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 bg-clip-text text-transparent">
-                Scale Faster
-              </span>
-              <br />
-              <span className="text-white">with Werkhaus</span>
-            </h1>
+         <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+  <span className="bg-gradient-to-r from-white via-orange-200 to-orange-500 bg-clip-text text-transparent">
+    Build Smarter,
+  </span>
+  <br />
+  <span className="bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 bg-clip-text text-transparent">
+    Scale Faster
+  </span>
+  <br />
+  <span className="text-white">with Werkhaus</span>
+</h1>
 
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Empower your business with AI-powered web design and automation tools. We help entrepreneurs transform
-              ideas into profitable digital experiences.
-            </p>
+<p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+  Empower your business with AI-powered web design and automation tools. 
+  We help entrepreneurs transform ideas into profitable digital experiences.
+</p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              
-            <button
-              onClick={() => setOpen(true)}
-              className="relative px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-lg overflow-hidden group transition-all duration-300 transform hover:scale-105"
-        >
-             {/* TEXT */}
-            <span className="relative z-10 flex items-center gap-2">
-               Start My Project →
-             </span>
+{/* DASHBOARD */}
+<div className="mt-14 flex justify-center">
+  <HeroDashboard />
+</div>
 
-             {/* GLOW */}
-            <span className="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-500 opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></span>
+{/* BUTTONS */}
+<div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
 
-             {/* SHINE */}
-             <span className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-white blur-2xl transition duration-500"></span>
-            </button>
+  <button
+    onClick={() => setOpen(true)}
+    className="relative px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-lg overflow-hidden group transition-all duration-300 transform hover:scale-105"
+  >
 
-          {/* SECOND BUTTON (KEEP SEPARATE) */}
-          <Button>
-             View Portfolio
-          </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+    {/* TEXT */}
+    <span className="relative z-10 flex items-center gap-2">
+      Start My Project →
+    </span>
+
+    {/* GLOW */}
+    <span className="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-500 opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></span>
+
+    {/* SHINE */}
+    <span className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-white blur-2xl transition duration-500"></span>
+
+  </button>
+
+  <Button>
+    View Portfolio
+  </Button>
+
+</div> 
+</div>
+</div>
+</section>
+
 
       {/* Core Services Section */}
       <section id="services" className="py-24 bg-gradient-to-b from-black to-gray-900">
