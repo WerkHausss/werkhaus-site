@@ -417,119 +417,286 @@ export default function WerkhausLanding() {
 </section>
 
 
-      {/* Core Services Section */}
-      <section id="services" className="py-24 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
-                Core Services
-              </span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Cutting-edge solutions designed to accelerate your business growth
-            </p>
+  {/* Core Services Section */}
+<section
+  id="services"
+  className="relative overflow-hidden py-32 bg-black"
+>
+  {/* Atmospheric Background */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,120,0,0.12),transparent_55%)]" />
+
+  <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#000000,#050816,#000000)]" />
+
+  {/* Subtle Glow */}
+  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-orange-500/10 blur-[140px]" />
+
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+          Core Services
+        </span>
+      </h2>
+
+      <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        Intelligent systems, modern experiences, and automation designed to scale your business.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8">
+
+      {/* MODERN WEBSITES */}
+      <Card className="bg-gray-900/50 border border-orange-500/20 hover:border-orange-400/60 hover:shadow-[0_0_60px_rgba(255,120,0,0.18)] transition-all duration-500 group overflow-hidden backdrop-blur-xl hover:-translate-y-2">
+        <CardContent className="p-8 text-center">
+
+          <div className="relative mx-auto mb-8 w-full max-w-[280px] h-[170px] rounded-2xl border border-orange-500/20 bg-black/60 overflow-hidden shadow-[0_0_40px_rgba(255,120,0,0.12)]">
+
+            {/* Browser Top */}
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-orange-500/10 bg-orange-500/5">
+              <div className="w-2 h-2 rounded-full bg-red-500" />
+              <div className="w-2 h-2 rounded-full bg-yellow-500" />
+              <div className="w-2 h-2 rounded-full bg-green-500" />
+            </div>
+
+            {/* Website UI */}
+            <div className="p-4 space-y-3">
+
+              <div className="h-3 w-24 rounded-full bg-orange-500/70 animate-pulse" />
+
+              <div className="space-y-2">
+                <div className="h-2 rounded-full bg-white/10 w-full" />
+                <div className="h-2 rounded-full bg-white/10 w-5/6" />
+                <div className="h-2 rounded-full bg-white/10 w-4/6" />
+              </div>
+
+              {/* Analytics */}
+              <div className="mt-4 flex items-end gap-1 h-12">
+                <div className="w-4 h-5 rounded-t bg-orange-500/40 animate-pulse" />
+                <div className="w-4 h-8 rounded-t bg-orange-500/60 animate-pulse" />
+                <div className="w-4 h-10 rounded-t bg-orange-500/80 animate-pulse" />
+                <div className="w-4 h-7 rounded-t bg-red-500/70 animate-pulse" />
+                <div className="w-4 h-11 rounded-t bg-orange-400/80 animate-pulse" />
+              </div>
+
+            </div>
+
+            {/* Glow */}
+            <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-40 h-20 bg-orange-500/20 blur-3xl" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                className="bg-gray-900/50 border-orange-500/20 hover:border-orange-500/50 transition-all duration-300 group hover:transform hover:scale-105"
-              >
-                <CardContent className="p-8 text-center">
-                  <div className="mb-6">
-                    <service.icon className="w-16 h-16 mx-auto text-orange-500 group-hover:text-orange-400 transition-colors" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{service.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <h3 className="text-2xl font-bold mb-4 text-white">
+            Modern Websites
+          </h3>
+
+          <p className="text-gray-300 leading-relaxed">
+            Lightning-fast, responsive websites that convert visitors into customers with cutting-edge design and optimization.
+          </p>
+
+        </CardContent>
+      </Card>
+
+      {/* AI FUNNELS */}
+      <Card className="bg-gray-900/50 border border-orange-500/20 hover:border-orange-400/60 hover:shadow-[0_0_60px_rgba(255,120,0,0.18)] transition-all duration-500 group overflow-hidden backdrop-blur-xl hover:-translate-y-2">
+        <CardContent className="p-8 text-center">
+
+          <div className="relative mx-auto mb-8 w-full max-w-[260px] h-[140px] rounded-2xl overflow-hidden border border-orange-500/20 bg-black/40">
+
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-500/10" />
+
+            {/* Pipeline */}
+            <div className="absolute top-1/2 left-8 right-8 h-[2px] bg-gradient-to-r from-orange-500/30 via-red-500/50 to-orange-500/30" />
+
+            {/* Nodes */}
+            <div className="absolute top-1/2 left-6 -translate-y-1/2 w-4 h-4 rounded-full bg-orange-500 shadow-[0_0_20px_rgba(255,120,0,0.9)] animate-pulse" />
+
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-red-500 shadow-[0_0_20px_rgba(255,80,80,0.9)] animate-pulse" />
+
+            <div className="absolute top-1/2 right-6 -translate-y-1/2 w-4 h-4 rounded-full bg-orange-400 shadow-[0_0_20px_rgba(255,140,0,0.9)] animate-pulse" />
+
+            {/* Labels */}
+            <div className="absolute top-4 left-4 text-[10px] text-orange-300 border border-orange-500/20 px-2 py-1 rounded-full bg-black/40">
+              Meta Ad
+            </div>
+
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[10px] text-red-300 border border-red-500/20 px-2 py-1 rounded-full bg-black/40">
+              AI Follow-Up
+            </div>
+
+            <div className="absolute top-4 right-4 text-[10px] text-orange-200 border border-orange-500/20 px-2 py-1 rounded-full bg-black/40">
+              Booking
+            </div>
+
+            {/* Activity */}
+            <div className="absolute bottom-3 right-3 text-[9px] text-green-400 animate-pulse">
+              + New Lead Captured
+            </div>
+
           </div>
+
+          <h3 className="text-2xl font-bold mb-4 text-white">
+            AI Funnels
+          </h3>
+
+          <p className="text-gray-300 leading-relaxed">
+            Intelligent sales funnels powered by AI that automatically nurture leads and maximize your conversion rates.
+          </p>
+
+        </CardContent>
+      </Card>
+
+      {/* AUTOMATION */}
+      <Card className="bg-gray-900/50 border border-orange-500/20 hover:border-orange-400/60 hover:shadow-[0_0_60px_rgba(255,120,0,0.18)] transition-all duration-500 group overflow-hidden backdrop-blur-xl hover:-translate-y-2">
+        <CardContent className="p-8 text-center">
+
+  <div className="relative mx-auto mb-8 w-full max-w-[260px] h-[160px] rounded-2xl border border-orange-500/20 bg-black/50 overflow-hidden backdrop-blur-xl">
+
+    {/* Glow */}
+    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-500/10" />
+
+    {/* Fake CRM Panel */}
+    <div className="absolute top-4 left-4 right-4 rounded-xl border border-orange-500/10 bg-black/40 p-3">
+
+      <div className="flex items-center justify-between mb-3">
+        <div className="text-[10px] text-orange-300">
+          CRM System
         </div>
-      </section>
 
-      {/* Portfolio Previews */}
-      <section id="portfolio" className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
-                Portfolio Showcase
-              </span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real results for real businesses. See how we've transformed ideas into success stories.
-            </p>
-          </div>
+        <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+      </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {portfolioItems.map((item, index) => (
-              <Card
-                key={index}
-                className="bg-gray-900/50 border-orange-500/20 hover:border-orange-500/50 transition-all duration-300 group overflow-hidden"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                </div>
-                <CardContent className="p-6">
-                  <Badge className="mb-3 bg-orange-500/20 text-orange-400 border-orange-500/30">{item.category}</Badge>
-                  <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
-                  <p className="text-gray-300">{item.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+      {/* Contact Rows */}
+      <div className="space-y-2">
+
+        <div className="flex items-center justify-between text-[9px]">
+          <span className="text-gray-300">New Lead</span>
+          <span className="text-green-400">Qualified</span>
         </div>
-      </section>
 
-      {/* Client Testimonials */}
-      <section id="testimonials" className="py-24 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
-                Client Success Stories
-              </span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our clients say about working with Werkhaus.
-            </p>
-          </div>
+        <div className="w-full h-[2px] bg-white/10 rounded-full overflow-hidden">
+          <div className="h-full w-4/5 bg-orange-500 animate-pulse rounded-full" />
+        </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={index}
-                className="bg-gray-900/50 border-orange-500/20 hover:border-orange-500/50 transition-all duration-300"
-              >
-                <CardContent className="p-8">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-orange-500 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                  <div className="flex items-center">
-                    <img
-                      src={testimonial.image || "/placeholder.svg"}
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full mr-4"
-                    />
-                    <div>
-                      <h4 className="font-bold text-white">{testimonial.name}</h4>
-                      <p className="text-orange-400 text-sm">{testimonial.role}</p>
+        <div className="flex items-center justify-between text-[9px]">
+          <span className="text-gray-300">Follow-Up</span>
+          <span className="text-orange-300">Sent</span>
+        </div>
+
+        <div className="w-full h-[2px] bg-white/10 rounded-full overflow-hidden">
+          <div
+            className="h-full w-3/5 bg-red-500 animate-pulse rounded-full"
+            style={{ animationDelay: "1s" }}
+          />
+        </div>
+
+      </div>
+    </div>
+
+    {/* Floating Notifications */}
+    <div className="absolute bottom-5 left-4 text-[10px] text-green-400 animate-pulse">
+      + Client Booked Call
+    </div>
+
+    <div
+      className="absolute bottom-10 right-4 text-[10px] text-orange-300 animate-pulse"
+      style={{ animationDelay: "1s" }}
+    >
+      AI Email Sent
+    </div>
+
+    {/* Glow Orb */}
+    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-32 h-20 bg-orange-500/20 blur-3xl" />
+
+  </div>
+
+  <h3 className="text-2xl font-bold mb-4 text-white">
+    Automation
+  </h3>
+
+  <p className="text-gray-300 leading-relaxed">
+    Streamline your business operations with smart automation systems that manage leads, follow-ups, bookings, and client workflows automatically.
+  </p>
+
+</CardContent>
+      </Card>
+
+    </div>
+  </div>
+</section>
+
+  
+            {/* Client Testimonials */}
+      <section
+        id="testimonials"
+        className="relative overflow-hidden py-32 bg-black"
+      >
+        {/* Atmospheric Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,120,0,0.10),transparent_50%)]" />
+
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#000000,#030712,#000000)]" />
+
+        {/* Ambient Glow */}
+        <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-orange-500/10 blur-[160px]" />
+
+        <div className="relative z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+                  Client Success Stories
+                </span>
+              </h2>
+
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Don't just take our word for it. Here's what our clients say about working with Werkhaus.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <Card
+                  key={index}
+                  className="bg-white/[0.03] backdrop-blur-xl border border-orange-500/20 hover:border-orange-400/40 hover:bg-white/[0.05] transition-all duration-500"
+                >
+                  <CardContent className="p-8">
+
+                    <div className="flex mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-5 h-5 text-orange-500 fill-current"
+                        />
+                      ))}
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+
+                    <p className="text-gray-300 mb-6 italic leading-relaxed">
+                      "{testimonial.content}"
+                    </p>
+
+                    <div className="flex items-center">
+                      <img
+                        src={testimonial.image || "/placeholder.svg"}
+                        alt={testimonial.name}
+                        className="w-12 h-12 rounded-full mr-4 border border-orange-500/20"
+                      />
+
+                      <div>
+                        <h4 className="font-bold text-white">
+                          {testimonial.name}
+                        </h4>
+
+                        <p className="text-orange-400 text-sm">
+                          {testimonial.role}
+                        </p>
+                      </div>
+                    </div>
+
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
           </div>
         </div>
       </section>
