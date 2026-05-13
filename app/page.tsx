@@ -193,7 +193,20 @@ export default function WerkhausLanding() {
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,120,0,0.12),transparent_60%)]" />
 
   {/* REALISTIC PLANET */}
-  <div className="absolute right-[-19%] top-1/2 -translate-y-1/2 w-[950px] h-[950px] rounded-full planet-float overflow-hidden">
+  <div
+  className="
+  absolute
+  right-[-95%] sm:right-[-55%] md:right-[-20%] xl:right-[-10%]
+  top-1/2 -translate-y-1/2
+  w-[700px] h-[700px]
+  sm:w-[850px] sm:h-[850px]
+  md:w-[950px] md:h-[950px]
+  xl:w-[1100px] xl:h-[1100px]
+  rounded-full
+  planet-float
+  overflow-hidden
+"
+>
 
     {/* Planet Core */}
     <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_30%_30%,#ff8a1c_0%,#ff7a00_25%,#ff4d00_55%,#120000_100%)] shadow-[0_0_180px_rgba(255,120,0,0.45)]" />
@@ -245,7 +258,7 @@ export default function WerkhausLanding() {
             className="absolute top-20 left-10 opacity-3 animate-bounce"
             style={{ animationDelay: "0s", animationDuration: "6s" }}
           >
-            <Code className="w-8 h-8 text-orange-400" />
+            <Code className="hidden md:block w-8 h-8 text-orange-400" />
           </div>
           <div
             className="absolute top-32 right-20 opacity-15 animate-pulse"
@@ -269,36 +282,40 @@ export default function WerkhausLanding() {
             className="absolute bottom-1/3 left-16 opacity-15 animate-bounce"
             style={{ animationDelay: "4s", animationDuration: "7s" }}
           >
-            <Zap className="w-8 h-8 text-orange-400" />
+            <Zap className="hidden md:block w-8 h-8 text-orange-400" />
           </div>
           <div
             className="absolute bottom-20 right-1/4 opacity-10 animate-pulse"
             style={{ animationDelay: "5s", animationDuration: "6s" }}
           >
-            <Monitor className="w-10 h-10 text-red-400" />
+            <Monitor className="hidden md:block w-10 h-10 text-red-400" />
           </div>
 
           {/* Geometric Shapes */}
-          <div
-            className="absolute top-16 right-1/3 w-4 h-4 bg-orange-500/20 rotate-45 animate-spin"
-            style={{ animationDuration: "20s" }}
-          ></div>
-          <div
-            className="absolute top-2/3 left-20 w-6 h-6 bg-red-500/15 rounded-full animate-ping"
-            style={{ animationDelay: "2s", animationDuration: "8s" }}
-          ></div>
-          <div
-            className="absolute bottom-1/4 right-16 w-3 h-3 bg-orange-400/25 rotate-12 animate-pulse"
-            style={{ animationDelay: "1s", animationDuration: "4s" }}
-          ></div>
-          <div
-            className="absolute top-1/4 right-12 w-8 h-1 bg-gradient-to-r from-orange-500/20 to-red-500/20 animate-pulse"
-            style={{ animationDelay: "3s", animationDuration: "6s" }}
-          ></div>
-          <div
-            className="absolute bottom-1/2 left-8 w-2 h-8 bg-gradient-to-b from-red-400/15 to-orange-400/15 animate-bounce"
-            style={{ animationDelay: "4s", animationDuration: "10s" }}
-          ></div>
+<div
+  className="absolute top-16 right-1/3 w-3 h-3 md:w-4 md:h-4 bg-orange-500/10 md:bg-orange-500/20 rotate-45 animate-spin"
+  style={{ animationDuration: "20s" }}
+></div>
+
+<div
+  className="absolute top-2/3 left-20 w-4 h-4 md:w-6 md:h-6 bg-red-500/10 md:bg-red-500/15 rounded-full animate-ping"
+  style={{ animationDelay: "2s", animationDuration: "8s" }}
+></div>
+
+<div
+  className="absolute bottom-1/4 right-16 w-2 h-2 md:w-3 md:h-3 bg-orange-400/15 md:bg-orange-400/25 rotate-12 animate-pulse"
+  style={{ animationDelay: "1s", animationDuration: "4s" }}
+></div>
+
+<div
+  className="hidden md:block absolute top-1/4 right-12 w-8 h-1 bg-gradient-to-r from-orange-500/20 to-red-500/20 animate-pulse"
+  style={{ animationDelay: "3s", animationDuration: "6s" }}
+></div>
+
+<div
+  className="hidden md:block absolute bottom-1/2 left-8 w-2 h-8 bg-gradient-to-b from-red-400/15 to-orange-400/15 animate-bounce"
+  style={{ animationDelay: "4s", animationDuration: "10s" }}
+></div>
 
           {/* Floating Dots */}
           <div
@@ -332,7 +349,7 @@ export default function WerkhausLanding() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             {/* Trust Badges */}
-            <div className="flex justify-center space-x-6 mb-8">
+            <div className="flex flex-wrap justify-center gap-2 mb-6 px-4 max-w-[320px] mx-auto">
               <Badge variant="outline" className="border-orange-500/50 text-orange-400">
                 <Clock className="w-4 h-4 mr-2" />
                 72hr turnaround
@@ -347,7 +364,7 @@ export default function WerkhausLanding() {
               </Badge>
             </div>
 
-         <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight">
   <span className="bg-gradient-to-r from-white via-orange-200 to-orange-500 bg-clip-text text-transparent">
     Build Smarter,
   </span>
@@ -359,7 +376,7 @@ export default function WerkhausLanding() {
   <span className="text-white">with Werkhaus</span>
 </h1>
 
-<p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+<p className="text-base sm:text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed px-2">
   Empower your business with AI-powered web design and automation tools. 
   We help entrepreneurs transform ideas into profitable digital experiences.
 </p>
