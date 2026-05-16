@@ -450,40 +450,65 @@ export default function WerkhausLanding() {
       <Card className="bg-gray-900/50 border border-orange-500/20 hover:border-orange-400/60 hover:shadow-[0_0_60px_rgba(255,120,0,0.18)] transition-all duration-500 group overflow-hidden backdrop-blur-xl hover:-translate-y-2">
         <CardContent className="p-8 text-center">
 
-          <div className="relative mx-auto mb-8 w-full max-w-[280px] h-[170px] rounded-2xl border border-orange-500/20 bg-black/60 overflow-hidden shadow-[0_0_40px_rgba(255,120,0,0.12)]">
+          <div className="relative mx-auto mb-8 w-full max-w-[300px] h-[180px] rounded-2xl overflow-hidden border border-orange-500/20 bg-black/50 backdrop-blur-xl shadow-[0_0_60px_rgba(255,120,0,0.12)]">
 
-            {/* Browser Top */}
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-orange-500/10 bg-orange-500/5">
-              <div className="w-2 h-2 rounded-full bg-red-500" />
-              <div className="w-2 h-2 rounded-full bg-yellow-500" />
-              <div className="w-2 h-2 rounded-full bg-green-500" />
-            </div>
+  {/* Glow */}
+  <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-500/5" />
 
-            {/* Website UI */}
-            <div className="p-4 space-y-3">
+  {/* Browser Top */}
+  <div className="flex items-center justify-between px-4 py-3 border-b border-orange-500/10 bg-black/40">
+    <div className="flex gap-2">
+      <div className="w-2 h-2 rounded-full bg-red-500" />
+      <div className="w-2 h-2 rounded-full bg-yellow-500" />
+      <div className="w-2 h-2 rounded-full bg-green-500" />
+    </div>
 
-              <div className="h-3 w-24 rounded-full bg-orange-500/70 animate-pulse" />
+    <div className="text-[9px] text-orange-300 tracking-[0.2em]">
+      WERKHAUS
+    </div>
+  </div>
 
-              <div className="space-y-2">
-                <div className="h-2 rounded-full bg-white/10 w-full" />
-                <div className="h-2 rounded-full bg-white/10 w-5/6" />
-                <div className="h-2 rounded-full bg-white/10 w-4/6" />
-              </div>
+  {/* Hero UI */}
+  <div className="p-4">
 
-              {/* Analytics */}
-              <div className="mt-4 flex items-end gap-1 h-12">
-                <div className="w-4 h-5 rounded-t bg-orange-500/40 animate-pulse" />
-                <div className="w-4 h-8 rounded-t bg-orange-500/60 animate-pulse" />
-                <div className="w-4 h-10 rounded-t bg-orange-500/80 animate-pulse" />
-                <div className="w-4 h-7 rounded-t bg-red-500/70 animate-pulse" />
-                <div className="w-4 h-11 rounded-t bg-orange-400/80 animate-pulse" />
-              </div>
+    <div className="h-3 w-28 rounded-full bg-orange-500/80 mb-3 animate-pulse" />
 
-            </div>
+    <div className="space-y-2 mb-4">
+      <div className="h-2 rounded-full bg-white/10 w-full" />
+      <div className="h-2 rounded-full bg-white/10 w-5/6" />
+      <div className="h-2 rounded-full bg-white/10 w-4/6" />
+    </div>
 
-            {/* Glow */}
-            <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-40 h-20 bg-orange-500/20 blur-3xl" />
-          </div>
+    {/* CTA */}
+    <div className="w-24 h-7 rounded-lg bg-gradient-to-r from-orange-500 to-red-500 shadow-[0_0_20px_rgba(255,120,0,0.5)] mb-5" />
+
+    {/* Analytics */}
+    <div className="flex items-end gap-2 h-14">
+
+      <div className="w-5 rounded-t bg-orange-500/40 h-5 animate-pulse" />
+
+      <div className="w-5 rounded-t bg-orange-500/60 h-8 animate-pulse" />
+
+      <div className="w-5 rounded-t bg-orange-500/80 h-11 animate-pulse" />
+
+      <div className="w-5 rounded-t bg-red-500/70 h-7 animate-pulse" />
+
+      <div className="w-5 rounded-t bg-orange-400/90 h-12 animate-pulse" />
+
+    </div>
+
+  </div>
+
+  {/* Floating Metric */}
+  <div className="absolute top-14 right-4 rounded-xl border border-orange-500/20 bg-black/60 px-3 py-2 backdrop-blur-md">
+    <div className="text-[10px] text-gray-400">Conversion</div>
+    <div className="text-sm font-bold text-green-400">+38%</div>
+  </div>
+
+  {/* Bottom Glow */}
+  <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-52 h-24 bg-orange-500/20 blur-3xl" />
+
+</div>
 
           <h3 className="text-2xl font-bold mb-4 text-white">
             Modern Websites
@@ -500,39 +525,158 @@ export default function WerkhausLanding() {
       <Card className="bg-gray-900/50 border border-orange-500/20 hover:border-orange-400/60 hover:shadow-[0_0_60px_rgba(255,120,0,0.18)] transition-all duration-500 group overflow-hidden backdrop-blur-xl hover:-translate-y-2">
         <CardContent className="p-8 text-center">
 
-          <div className="relative mx-auto mb-8 w-full max-w-[260px] h-[140px] rounded-2xl overflow-hidden border border-orange-500/20 bg-black/40">
+          <div className="relative mx-auto mb-8 w-full max-w-[320px] h-[220px] rounded-3xl overflow-hidden border border-orange-500/20 bg-black/50 backdrop-blur-xl shadow-[0_0_60px_rgba(255,120,0,0.12)] p-5">
 
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-500/10" />
+  {/* Background Glow */}
+  <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-red-500/5 to-transparent" />
 
-            {/* Pipeline */}
-            <div className="absolute top-1/2 left-8 right-8 h-[2px] bg-gradient-to-r from-orange-500/30 via-red-500/50 to-orange-500/30" />
+  {/* Header */}
+  <div className="relative flex items-center justify-between mb-5">
 
-            {/* Nodes */}
-            <div className="absolute top-1/2 left-6 -translate-y-1/2 w-4 h-4 rounded-full bg-orange-500 shadow-[0_0_20px_rgba(255,120,0,0.9)] animate-pulse" />
+    <div>
+      <p className="text-[10px] uppercase tracking-[0.2em] text-orange-400">
+        AI Funnels
+      </p>
 
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-red-500 shadow-[0_0_20px_rgba(255,80,80,0.9)] animate-pulse" />
+      <h4 className="text-white font-semibold text-lg">
+        Live Lead System
+      </h4>
+    </div>
 
-            <div className="absolute top-1/2 right-6 -translate-y-1/2 w-4 h-4 rounded-full bg-orange-400 shadow-[0_0_20px_rgba(255,140,0,0.9)] animate-pulse" />
+    <div className="flex items-center gap-2">
+      <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+      <span className="text-[10px] text-green-400">
+        LIVE
+      </span>
+    </div>
 
-            {/* Labels */}
-            <div className="absolute top-4 left-4 text-[10px] text-orange-300 border border-orange-500/20 px-2 py-1 rounded-full bg-black/40">
-              Meta Ad
-            </div>
+  </div>
 
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[10px] text-red-300 border border-red-500/20 px-2 py-1 rounded-full bg-black/40">
-              AI Follow-Up
-            </div>
+  {/* Metrics */}
+  <div className="flex gap-2 mb-5">
 
-            <div className="absolute top-4 right-4 text-[10px] text-orange-200 border border-orange-500/20 px-2 py-1 rounded-full bg-black/40">
-              Booking
-            </div>
+    <div className="flex-1 rounded-xl border border-orange-500/10 bg-black/40 p-2 text-center">
+      <p className="text-orange-400 text-sm font-bold">
+        72%
+      </p>
 
-            {/* Activity */}
-            <div className="absolute bottom-3 right-3 text-[9px] text-green-400 animate-pulse">
-              + New Lead Captured
-            </div>
+      <p className="text-[9px] text-gray-400 uppercase">
+        Conversion
+      </p>
+    </div>
 
-          </div>
+    <div className="flex-1 rounded-xl border border-green-500/10 bg-black/40 p-2 text-center">
+      <p className="text-green-400 text-sm font-bold">
+        14
+      </p>
+
+      <p className="text-[9px] text-gray-400 uppercase">
+        Leads
+      </p>
+    </div>
+
+    <div className="flex-1 rounded-xl border border-purple-500/10 bg-black/40 p-2 text-center">
+      <p className="text-purple-400 text-sm font-bold">
+        11s
+      </p>
+
+      <p className="text-[9px] text-gray-400 uppercase">
+        AI Reply
+      </p>
+    </div>
+
+  </div>
+
+  {/* Funnel Pipeline */}
+  <div className="relative flex items-center justify-between mb-6">
+
+    <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-[2px] bg-gradient-to-r from-orange-500/20 via-red-500/40 to-orange-500/20" />
+
+    {/* Step 1 */}
+    <div className="relative z-10 flex flex-col items-center">
+
+      <div className="w-10 h-10 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
+        <span className="text-[9px] text-blue-400">
+          Ad
+        </span>
+      </div>
+
+      <p className="text-[9px] text-gray-400 mt-2">
+        Meta
+      </p>
+
+    </div>
+
+    {/* Step 2 */}
+    <div className="relative z-10 flex flex-col items-center">
+
+      <div className="w-10 h-10 rounded-full bg-orange-500/20 border border-orange-500/30 flex items-center justify-center animate-pulse">
+        <span className="text-[9px] text-orange-400">
+          Lead
+        </span>
+      </div>
+
+      <p className="text-[9px] text-gray-400 mt-2">
+        Capture
+      </p>
+
+    </div>
+
+    {/* Step 3 */}
+    <div className="relative z-10 flex flex-col items-center">
+
+      <div className="w-10 h-10 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center">
+        <span className="text-[9px] text-purple-400">
+          AI
+        </span>
+      </div>
+
+      <p className="text-[9px] text-gray-400 mt-2">
+        Follow-Up
+      </p>
+
+    </div>
+
+    {/* Step 4 */}
+    <div className="relative z-10 flex flex-col items-center">
+
+      <div className="w-10 h-10 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center">
+        <span className="text-[9px] text-green-400">
+          CRM
+        </span>
+      </div>
+
+      <p className="text-[9px] text-gray-400 mt-2">
+        Saved
+      </p>
+
+    </div>
+
+  </div>
+
+  {/* AI Message */}
+  <div className="rounded-2xl border border-white/5 bg-white/[0.03] p-3">
+
+    <p className="text-[9px] text-gray-500 mb-2">
+      AI SMS Preview
+    </p>
+
+    <div className="rounded-xl bg-black/40 border border-white/5 p-3">
+
+      <p className="text-xs text-gray-200 leading-relaxed">
+        Hey Sarah 👋 thanks for your interest.  
+        Here’s your booking link.
+      </p>
+
+      <button className="mt-3 px-3 py-2 rounded-lg bg-orange-500 text-black text-[10px] font-semibold hover:bg-orange-400 transition-colors">
+        Book Call
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
 
           <h3 className="text-2xl font-bold mb-4 text-white">
             AI Funnels
